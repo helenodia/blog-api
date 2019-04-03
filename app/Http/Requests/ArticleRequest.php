@@ -6,8 +6,6 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class ArticleRequest extends FormRequest
 {
-    // always return true
-    // unless you add user logins
     public function authorize()
     {
     return true;
