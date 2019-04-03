@@ -60,14 +60,16 @@ class Articles extends Controller
      * @return \Illuminate\Http\Response
      */
         // accept the article
-    public function update(ArticleRequest $request, Article $article)
+    public function update(ArticleRequest $request, Exercise $exercise)
     {
-        $data = $request->only(["title", "article"]);
-        $article->fill($data)->save();
-        // use the new method - can't chain as save returns a bool
-        $article->setTags($request->get("tags"));
-        return new ArticleResource($article);
+        // $data = $request->only(["title", "article"]);
+        // $article->fill($data)->save();
+        // // use the new method - can't chain as save returns a bool
+        // $article->setTags($request->get("tags"));
+        // return new ArticleResource($article);
     }
+
+
     /**
      * Remove the specified resource from storage.
      *
